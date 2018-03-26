@@ -1,0 +1,14 @@
+run("Subtract Background...", "rolling=10");
+run("Enhance Contrast", "saturated=0.35");
+run("Make Binary");
+run("Convert to Mask");
+run("Close-");
+run("Fill Holes");
+run("Dilate");
+run("Close-");
+run("Fill Holes");
+run("Erode");
+run("Watershed");
+run("Close-");
+run("Analyze Particles...", "size=20-Infinity pixel show=Masks display add");
+run("Save");
